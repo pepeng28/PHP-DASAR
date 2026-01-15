@@ -22,3 +22,12 @@ $filterGoodBye =  function (string $name) : string {
 };
 
 sayGoodBye("ell" , $filterGoodBye);
+
+$firstname = "ell";
+$lastname = "coding";
+
+$sayHelloEll = function () use ($firstname , $lastname ) {
+  echo "hello $firstname $lastname" . PHP_EOL;
+}; 
+
+$sayHelloEll();
