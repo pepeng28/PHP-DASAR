@@ -11,12 +11,23 @@ function factorialLoop(int $value): int{
 var_dump(factorialLoop(5));
 var_dump(1 * 2 * 3 * 4 * 5);
 
-function factorialRecursuve(int $value): int{
+function factorialRecursive(int $value): int{
   if ($value == 1) {
     return 1;
   } else {
-    return $value * factorialRecursuve($value - 1);
+    return $value * factorialRecursive($value - 1);
   }
 }
 
-var_dump(factorialRecursuve(5));
+var_dump(factorialRecursive(5));
+
+function loop(int $value) {
+  if ($value == 0) {
+    echo "loop end" . PHP_EOL;
+  } else {
+    echo "loop-$value" . PHP_EOL;
+    loop($value - 1);
+  }
+}
+
+loop(3000000);
